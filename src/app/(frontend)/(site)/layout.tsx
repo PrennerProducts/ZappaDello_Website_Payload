@@ -11,7 +11,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       <div className="relative flex-1 min-h-screen overflow-hidden border-4 border-amber-50">
         {children}
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }
