@@ -1,17 +1,14 @@
-// components/3D/ScrollScene.tsx
 'use client'
 
 import { Canvas, useFrame } from '@react-three/fiber'
-import { PerspectiveCamera } from '@react-three/drei'
+import { ScrollControls, Scroll, PerspectiveCamera, useScroll, Html } from '@react-three/drei'
 import { Suspense, useRef } from 'react'
 import * as THREE from 'three'
 
-import Panel from './Panel'
 import HeroSection from '../sections/HeroSection'
 import GallerySection from '../sections/GallerySection'
 import EventsSection from '../sections/EventsSection'
 import AboutSection from '../sections/AboutSection'
-import { useScrollProgress } from '@/lib/useScrollProgress'
 
 type Image = {
   id: string
@@ -19,18 +16,20 @@ type Image = {
   caption?: string
 }
 
-function Scene({ scroll, images }: { scroll: number; images: Image[] }) {
+function Scene({ images }: { images: Image[] }) {
+  const scroll = useScroll()
   const cameraRef = useRef<THREE.PerspectiveCamera>(null)
 
   useFrame(() => {
-    if (cameraRef.current) {
-      // Sanfte Positionsberechnung basierend auf Abschnitt
-      const panelDistance = 20 // z.B. 20 Einheiten pro Panel
-      const z = 50 - scroll * (panelDistance * 4) // 4 Panels
-      cameraRef.current.position.z = z
+    const offset = scroll.offset // smooth: 0–1
 
-      // Optional leichtes Rotieren
-      cameraRef.current.rotation.y = scroll * 0.2
+    const totalPanels = 4
+    const panelDistance = 20
+    const targetZ = 50 - offset * panelDistance * (totalPanels - 1)
+
+    if (cameraRef.current) {
+      cameraRef.current.position.z += (targetZ - cameraRef.current.position.z) * 0.1
+      cameraRef.current.rotation.y = offset * 0.3
     }
   })
 
@@ -39,57 +38,47 @@ function Scene({ scroll, images }: { scroll: number; images: Image[] }) {
       <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 0, 50]} />
       <ambientLight intensity={1} />
 
-      <Panel position={[0, 0, 0]}>
-        {scroll < 0.25 && (
-          <div className="w-full h-full text-white text-4xl flex justify-center items-center">
+      {/* Scrollbarer Inhalt */}
+      <Scroll>
+        <Html center position={[0, 0, 0]} zIndexRange={[100, 0]}>
+          <div className="w-screen h-screen flex items-center justify-center">
             <HeroSection />
           </div>
-        )}
-      </Panel>
+        </Html>
 
-      <Panel position={[0, 0, -10]}>
-        {scroll >= 0.25 && scroll < 0.5 && (
-          <div className="w-full h-screen text-white text-4xl flex justify-center items-center">
+        <Html center position={[0, 0, -20]} zIndexRange={[100, 0]}>
+          <div className="w-screen h-screen flex items-center justify-center">
             <GallerySection images={images} />
           </div>
-        )}
-      </Panel>
+        </Html>
 
-      <Panel position={[0, 0, -20]}>
-        {scroll >= 0.5 && scroll < 0.75 && (
-          <div className="w-full h-full bg-green-600 text-white text-4xl flex justify-center items-center">
+        <Html center position={[0, 0, -40]} zIndexRange={[100, 0]}>
+          <div className="w-screen h-screen flex items-center justify-center">
             <EventsSection />
           </div>
-        )}
-      </Panel>
+        </Html>
 
-      <Panel position={[0, 0, -30]}>
-        {scroll >= 0.75 && (
-          <div className="w-full h-full bg-blue-600 text-white text-4xl flex justify-center items-center">
+        <Html center position={[0, 0, -60]} zIndexRange={[100, 0]}>
+          <div className="w-screen h-screen flex items-center justify-center">
             <AboutSection />
           </div>
-        )}
-      </Panel>
+        </Html>
+      </Scroll>
     </>
   )
 }
 
 export default function ScrollScene({ images }: { images: Image[] }) {
-  const scroll = useScrollProgress(4)
-
   return (
-    <div className="relative z-10 h-[400vh] pointer-events-none">
-      {/* Canvas im Hintergrund */}
-      <div className="fixed inset-0 z-0">
-        <Canvas>
-          <Suspense fallback={null}>
-            <Scene scroll={scroll} images={images} />
-          </Suspense>
-        </Canvas>
-      </div>
-
-      {/* Dummy-Sektion zum Scrollen */}
-      <div className="relative z-10 h-[400vh] pointer-events-none" />
+    <div className="w-full h-screen fixed top-0 left-0 z-50 pointer-events-none">
+      <Canvas gl={{ antialias: true, alpha: true }} camera={{ position: [0, 0, 10], fov: 75 }}>
+        <Suspense fallback={null}>
+          {/* 🧠 Hier steuerst du: wie VIEL man scrollen muss */}
+          <ScrollControls pages={4} damping={0.15}>
+            <Scene images={images} />
+          </ScrollControls>
+        </Suspense>
+      </Canvas>
     </div>
   )
 }
