@@ -6,7 +6,7 @@ import { TypeAnimation } from 'react-type-animation'
 
 export default function HeroSection() {
   return (
-    <section className="w-full h-screen flex flex-col items-center justify-center relative overflow-hidden border-2 border-amber-700">
+    <section className="w-screen h-screen flex flex-col items-center justify-center relative overflow-hidden border-2 border-amber-700">
       {/* ✨ Partikel im Hintergrund */}
       <div className="absolute inset-0 -z-10 ">
         <HeroParticles />
