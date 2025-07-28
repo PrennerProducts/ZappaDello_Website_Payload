@@ -4,7 +4,8 @@ import { postgresAdapter } from '@payloadcms/db-postgres'
 import { fileURLToPath } from 'url'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { buildConfig } from 'payload'
-
+import Events from './collections/Events'
+import { GalleryImages } from './collections/GalleryImages'
 // If you want to use Cloudflare R2 or AWS S3, uncomment the following lines
 // import { s3Storage } from '@payloadcms/storage-s3'
 
@@ -24,7 +25,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media],
+  collections: [Users, Media, Events, GalleryImages],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

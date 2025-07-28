@@ -1,0 +1,109 @@
+@import 'tailwindcss';
+/* =========================
+   Globale Custom Styles
+   ========================= */
+
+:root {
+  --font-mono: 'Roboto Mono', monospace;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  @apply m-0 bg-black text-white font-sans text-[18px] leading-[32px] antialiased;
+}
+
+img {
+  @apply max-w-full h-auto block;
+}
+
+h1 {
+  @apply my-10 text-[64px] leading-[70px] font-bold;
+
+  /* Responsive Anpassung */
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    @apply my-6 text-[42px] leading-[42px];
+  }
+
+  body {
+    @apply text-[15px] leading-[24px];
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    @apply text-[38px] leading-[38px];
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    @apply text-[32px] leading-[32px];
+  }
+
+  .home {
+    @apply p-6;
+  }
+}
+
+/* Basis-Styling für Links */
+a {
+  @apply text-inherit no-underline;
+}
+a:focus {
+  @apply opacity-80 outline-none;
+}
+a:active {
+  @apply opacity-70 outline-none;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+/* Optionales Layout für Startseite */
+.home {
+  @apply flex flex-col justify-between items-center h-screen p-[45px] max-w-[1024px] mx-auto overflow-hidden;
+}
+
+.home .content {
+  @apply flex flex-col items-center justify-center flex-grow;
+}
+.home .content h1 {
+  @apply text-center;
+}
+
+.home .links {
+  @apply flex items-center gap-3;
+}
+.home .links a {
+  @apply no-underline px-2 py-1 rounded;
+}
+.home .links .admin {
+  @apply text-black bg-white border border-black;
+}
+.home .links .docs {
+  @apply text-white bg-black border border-white;
+}
+
+.home .footer {
+  @apply flex items-center gap-2;
+}
+@media (max-width: 1024px) {
+  .home .footer {
+    @apply flex-col gap-1.5;
+  }
+}
+.home .footer p {
+  @apply m-0;
+}
+.home .footer .codeLink {
+  @apply no-underline px-2 bg-gray-700 rounded;
+}

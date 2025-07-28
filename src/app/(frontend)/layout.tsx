@@ -1,4 +1,4 @@
-import '@/globals.css'
+import '../globals.css'
 
 import { Geist as FontSans } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme/theme-provider'
@@ -43,12 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           disableTransitionOnChange
         >
           {children}
-          <Toaster 
-            richColors 
-            position="top-center" 
-            expand={true}
-            closeButton
-          />
+          <Toaster richColors position="top-center" expand={true} closeButton />
         </ThemeProvider>
         <Analytics />
       </body>
