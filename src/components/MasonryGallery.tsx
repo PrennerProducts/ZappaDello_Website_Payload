@@ -38,7 +38,7 @@ export default function MasonryGallery({ images }: Props) {
             whileHover={{ scale: 1.03 }}
             viewport={{ once: true }}
             transition={{ duration: 0.35, ease: 'easeOut' }}
-            className="relative cursor-pointer overflow-hidden rounded-2xl border border-cyan-500/10 hover:border-cyan-400/50 shadow-md hover:shadow-[0_0_30px_4px_rgba(0,255,255,0.2)] transition-all duration-300 backdrop-blur-sm bg-black/20"
+            className="relative cursor-pointer overflow-hidden rounded-2xl border border-amber-500/20 hover:border-amber-400/60 shadow-md hover:shadow-[0_0_30px_4px_rgba(245,158,11,0.4)] transition-all duration-300 backdrop-blur-sm bg-black/40"
             onClick={() => setIndex(i)}
           >
             <Image
@@ -50,7 +50,7 @@ export default function MasonryGallery({ images }: Props) {
             />
             {caption && (
               <div className="absolute bottom-0 w-full bg-gradient-to-t from-black/80 to-transparent p-4 backdrop-blur-sm">
-                <p className="text-sm text-cyan-100">{caption}</p>
+                <p className="text-sm text-amber-200">{caption}</p>
               </div>
             )}
             <div className="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition flex items-center justify-center text-white font-medium text-lg">
@@ -77,7 +77,7 @@ export default function MasonryGallery({ images }: Props) {
           iconZoomOut: () => null,
           slide: ({ slide }) => (
             <div className="flex items-center justify-center w-full h-full px-6">
-              <div className="p-[2px] rounded-2xl border border-cyan-400 shadow-[0_0_30px_5px_rgba(0,255,255,0.3)] overflow-hidden">
+              <div className="p-[2px] rounded-2xl border border-cyan-400 shadow-[0_0_30px_5px_rgba(6,182,212,0.5)] overflow-hidden">
                 <div className="relative max-w-[90vw] max-h-[calc(100vh-160px)] flex items-center justify-center">
                   <Image
                     src={slide.src}
@@ -96,9 +96,9 @@ export default function MasonryGallery({ images }: Props) {
             backgroundColor: 'rgba(0,0,0,0.95)',
             backdropFilter: 'blur(6px)',
           },
-          navigationPrev: { color: '#00ffff', fontSize: '2rem' },
-          navigationNext: { color: '#00ffff', fontSize: '2rem' },
-          button: { color: '#00ffff' },
+          navigationPrev: { color: '#06b6d4', fontSize: '2rem' },
+          navigationNext: { color: '#06b6d4', fontSize: '2rem' },
+          button: { color: '#06b6d4' },
         }}
       />
     </>
