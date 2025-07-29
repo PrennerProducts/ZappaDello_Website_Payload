@@ -95,7 +95,7 @@ export default function EventsSection({ events }: Props) {
                       className="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-black font-bold rounded-lg transition-all duration-300 shadow-lg shadow-amber-500/25 hover:shadow-amber-500/50 hover:scale-105 transform group"
                     >
                       <span className="group-hover:animate-bounce inline-block">🔥</span>
-                      <span className="ml-2">Let's Go!</span>
+                      <span className="ml-2">Let&apos;s Go!</span>
                     </button>
                   </div>
                 </div>
