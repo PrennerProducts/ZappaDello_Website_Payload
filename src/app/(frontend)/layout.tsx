@@ -14,27 +14,42 @@ const fontSans = FontSans({
 })
 
 export const metadata: Metadata = {
-  title: 'Payload SaaS Starter by Bridger Tower',
-  description: 'A modern SaaS starter built with Payload CMS, Next.js, and TypeScript',
-  metadataBase: new URL('https://payload-saas-starter.vercel.app/'),
+  title: 'Zappadello',
+  description:
+    'Willkommen in der Zappadello Bar! Seit 1992 der Treffpunkt im Kaunertal für Cocktails, Craft Beer und unvergessliche Abende. Manuel und Iris laden dich ein!',
+  metadataBase: new URL('https://zappadello.at/'),
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    url: 'https://payload-saas-starter.vercel.app/',
-    siteName: 'Payload SaaS Starter by Bridger Tower',
-    title: 'Payload SaaS Starter by Bridger Tower',
-    description: 'A modern SaaS starter built with Payload CMS, Next.js, and TypeScript',
+    locale: 'de_AT',
+    url: 'https://zappadello.at/',
+    siteName: 'Zappadello Bar',
+    title: 'Zappadello Bar - Die Bar im Kaunertal',
+    description:
+      'Willkommen in der Zappadello Bar! Seit 1992 der Treffpunkt im Kaunertal für Cocktails, Craft Beer und unvergessliche Abende. Manuel und Iris laden dich ein!',
+    images: [
+      {
+        url: '/logo.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Zappadello Bar Logo',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Payload SaaS Starter by Bridger Tower',
-    description: 'A modern SaaS starter built with Payload CMS, Next.js, and TypeScript',
+    title: 'Zappadello Bar - Die Bar im Kaunertal',
+    description:
+      'Willkommen in der Zappadello Bar! Seit 1992 der Treffpunkt im Kaunertal für Cocktails, Craft Beer und unvergessliche Abende.',
+  },
+  icons: {
+    icon: '/logo.svg',
+    apple: '/logo.svg',
   },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={fontSans.className} suppressHydrationWarning>
+    <html lang="de" className={fontSans.className} suppressHydrationWarning>
       <body className={cn('flex flex-col min-h-screen', fontSans.className)}>
         <ThemeProvider
           attribute="class"

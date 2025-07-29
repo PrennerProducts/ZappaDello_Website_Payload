@@ -9,7 +9,6 @@ export const dynamic = 'force-dynamic'
 export default async function SiteLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <BurgerMenu />
       <div className="relative flex-1 min-h-screen overflow-hidden">
         <DiscoBackground />
         <HeroParticles />

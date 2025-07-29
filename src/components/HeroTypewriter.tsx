@@ -9,7 +9,7 @@ export default function HeroTypewriter() {
     3000,
     'The music, the people and you.',
     3000,
-    'The bar in Kaunertal.',
+    'The original bar in Kaunertal.',
     3000,
     'Be there or be square.',
     5000,
@@ -24,7 +24,7 @@ export default function HeroTypewriter() {
     3000,
     'The music, the people and you.',
     3000,
-    'The bar in Kaunertal.',
+    'The original bar in Kaunertal.',
     3000,
     'Be there or be square.',
   ]

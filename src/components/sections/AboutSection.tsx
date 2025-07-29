@@ -13,7 +13,9 @@ export default function AboutSection() {
           {/* Discoball - Banner Format */}
           <div className="flex justify-center mb-12">
             <div className="w-screen h-[200px] md:h-[550px] relative -mx-6">
-              <DiscoBallScene />
+              <div className="rounded-2xl overflow-hidden h-full shadow-[0_0_30px_4px_rgba(245,158,11,0.4)] border border-gray-600/40">
+                <DiscoBallScene />
+              </div>
               {/* Interactive Icon */}
               <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-sm rounded-full p-2 border border-gray-600/40">
                 <div className="flex items-center space-x-2 text-white text-xs">
@@ -36,7 +38,7 @@ export default function AboutSection() {
               </p>
 
               <p className="text-xl text-gray-200 leading-relaxed">
-                Seit 2024 schmeißen Manuel und Iris den Laden gemeinsam und sorgen mit viel Herzblut
+                Seit 2022 schmeißen Manuel und Iris den Laden gemeinsam und sorgen mit viel Herzblut
                 für unvergessliche Abende. Ob gemütlich was trinken oder bis in die Morgenstunden
                 feiern – hier ist alles möglich.
               </p>

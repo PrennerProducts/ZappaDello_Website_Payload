@@ -8,6 +8,7 @@ import ContactSection from '@/components/sections/ContactSection'
 import AboutSection from '@/components/sections/AboutSection'
 import HeroParticles from '@/components/HeroParticles'
 import DiscoBallScene from '@/components/DiscoBallScene'
+import BurgerMenu from '@/components/BurgerMenu'
 
 export const dynamic = 'force-dynamic'
 
@@ -69,6 +70,7 @@ export default async function HomePage() {
 
   return (
     <div className="relative min-h-screen overflow-y-auto bg-black">
+      <BurgerMenu />
       {/* Fixed Background with Neon Lights and Particles */}
       <div className="fixed inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>

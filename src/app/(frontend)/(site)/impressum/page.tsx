@@ -44,118 +44,45 @@ export default function ImpressumPage() {
               <div className="space-y-8 text-gray-200">
                 {/* Angaben gemäß § 5 TMG */}
                 <section>
-                  <h2 className="text-2xl font-bold text-white mb-4">Angaben gemäß § 5 TMG</h2>
-                  <div className="space-y-2">
-                    <p>
-                      <strong>Inhaber:</strong> Manuel Praxmarer
-                    </p>
-                    <p>
-                      <strong>Adresse:</strong> Feichten 102, 6524 Kaunertal, Austria
-                    </p>
-                    <p>
-                      <strong>Telefon:</strong> 0650 517 43 55
-                    </p>
-                    <p>
-                      <strong>Email:</strong> zappadello@gmail.com
-                    </p>
-                  </div>
+                  <h2 className="text-2xl font-bold text-white mb-4">Angaben gemäß § 5 ECG</h2>
+                  <p>
+                    <strong>Inhaber:</strong> Manuel Praxmarer
+                    <br />
+                    <strong>Adresse:</strong> Feichten 102, 6524 Kaunertal, Österreich
+                    <br />
+                    <strong>Telefon:</strong> 0650 517 43 55
+                    <br />
+                    <strong>E-Mail:</strong> zappadello@gmail.com
+                  </p>
                 </section>
 
-                {/* Verantwortlich für den Inhalt */}
-                <section>
-                  <h2 className="text-2xl font-bold text-white mb-4">
-                    Verantwortlich für den Inhalt
-                  </h2>
-                  <div className="space-y-2">
-                    <p>
-                      <strong>Inhaber:</strong> Manuel Praxmarer
-                    </p>
-                    <p>
-                      <strong>UID-Nummer:</strong> [UID-Nummer]
-                    </p>
-                    <p>
-                      <strong>Adresse:</strong> Feichten 102, 6524 Kaunertal, Austria
-                    </p>
-                  </div>
-                </section>
-
-                {/* Haftungsausschluss */}
                 <section>
                   <h2 className="text-2xl font-bold text-white mb-4">Haftungsausschluss</h2>
-                  <div className="space-y-4">
-                    <p>
-                      <strong>Haftung für Inhalte:</strong> Die Inhalte unserer Seiten wurden mit
-                      größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität
-                      der Inhalte können wir jedoch keine Gewähr übernehmen.
-                    </p>
-                    <p>
-                      <strong>Haftung für Links:</strong> Unser Angebot enthält Links zu externen
-                      Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können
-                      wir für diese fremden Inhalte auch keine Gewähr übernehmen.
-                    </p>
-                  </div>
+                  <p>
+                    Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die
+                    Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich
+                    deren Betreiber verantwortlich.
+                  </p>
                 </section>
 
-                {/* Urheberrecht */}
                 <section>
                   <h2 className="text-2xl font-bold text-white mb-4">Urheberrecht</h2>
                   <p>
-                    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
-                    unterliegen dem österreichischen Urheberrecht. Die Vervielfältigung,
-                    Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des
-                    Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.
-                    Erstellers.
+                    Alle Inhalte dieser Website (Texte, Bilder, Grafiken) unterliegen dem
+                    Urheberrecht. Die Verwendung ohne ausdrückliche schriftliche Zustimmung ist
+                    nicht gestattet. Fotos auf der Website können Gäste abbilden – sollten Sie damit
+                    nicht einverstanden sein, kontaktieren Sie uns bitte, und wir entfernen das Bild
+                    umgehend.
                   </p>
                 </section>
 
-                {/* Datenschutz */}
                 <section>
-                  <h2 className="text-2xl font-bold text-white mb-4">Datenschutz</h2>
+                  <h2 className="text-2xl font-bold text-white mb-4">Webanalyse & Cookies</h2>
                   <p>
-                    Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener
-                    Daten möglich. Soweit auf unseren Seiten personenbezogene Daten (beispielsweise
-                    Name, Anschrift oder E-Mail-Adressen) erhoben werden, erfolgt dies, soweit
-                    möglich, stets auf freiwilliger Basis.
+                    Diese Website nutzt Vercel Analytics zur anonymisierten Besucheranalyse. Es
+                    werden keine personenbezogenen Daten gespeichert. Außerdem kann durch die
+                    Nutzung von Google Fonts eine Verbindung zu Google-Servern aufgebaut werden.
                   </p>
-                  <p className="mt-4">
-                    <strong>Datenschutzerklärung:</strong> Diese Website verwendet keine Cookies
-                    oder Tracking-Tools. Es werden keine personenbezogenen Daten gespeichert oder an
-                    Dritte weitergegeben.
-                  </p>
-                </section>
-
-                {/* Gewerberecht */}
-                <section>
-                  <h2 className="text-2xl font-bold text-white mb-4">Gewerberecht</h2>
-                  <div className="space-y-2">
-                    <p>
-                      <strong>Gewerbe:</strong> Gastgewerbe (Bar, Restaurant)
-                    </p>
-                    <p>
-                      <strong>Zuständige Behörde:</strong> Bezirkshauptmannschaft Landeck
-                    </p>
-                    <p>
-                      <strong>Gewerbeberechtigung:</strong> Vorhanden
-                    </p>
-                  </div>
-                </section>
-
-                {/* Kontakt */}
-                <section>
-                  <h2 className="text-2xl font-bold text-white mb-4">Kontakt</h2>
-                  <div className="space-y-2">
-                    <p>
-                      <strong>Manuel Praxmarer</strong>
-                    </p>
-                    <p>Feichten 102</p>
-                    <p>6524 Kaunertal, Austria</p>
-                    <p>
-                      <strong>Telefon:</strong> 0650 517 43 55
-                    </p>
-                    <p>
-                      <strong>Email:</strong> zappadello@gmail.com
-                    </p>
-                  </div>
                 </section>
 
                 {/* Footer */}

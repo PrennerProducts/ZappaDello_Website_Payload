@@ -31,7 +31,7 @@ export default function DiscoBallScene() {
         <pointLight position={[10, 10, 10]} intensity={1} />
         <DiscoBall />
         <OrbitControls enableZoom={false} />
-        <Environment files="/iris.jpeg" background />
+        <Environment files="/partyzappa.JPG" background />
       </Canvas>
     </div>
   )

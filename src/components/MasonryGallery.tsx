@@ -77,7 +77,7 @@ export default function MasonryGallery({ images }: Props) {
           iconZoomOut: () => null,
           slide: ({ slide }) => (
             <div className="flex items-center justify-center w-full h-full px-6">
-              <div className="p-[2px] rounded-2xl border border-cyan-400 shadow-[0_0_30px_5px_rgba(6,182,212,0.5)] overflow-hidden">
+              <div className="p-[2px] rounded-2xl border border-amber-400 shadow-[0_0_30px_5px_rgba(245,158,11,0.5)] overflow-hidden">
                 <div className="relative max-w-[90vw] max-h-[calc(100vh-160px)] flex items-center justify-center">
                   <Image
                     src={slide.src}
@@ -96,9 +96,9 @@ export default function MasonryGallery({ images }: Props) {
             backgroundColor: 'rgba(0,0,0,0.95)',
             backdropFilter: 'blur(6px)',
           },
-          navigationPrev: { color: '#06b6d4', fontSize: '2rem' },
-          navigationNext: { color: '#06b6d4', fontSize: '2rem' },
-          button: { color: '#06b6d4' },
+          navigationPrev: { color: '#f59e0b', fontSize: '2rem' },
+          navigationNext: { color: '#f59e0b', fontSize: '2rem' },
+          button: { color: '#f59e0b' },
         }}
       />
     </>
