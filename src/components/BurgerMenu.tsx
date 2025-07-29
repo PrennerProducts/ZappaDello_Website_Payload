@@ -3,13 +3,19 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import clsx from 'clsx'
-import MenuBackgroundCanvas from './MenuBackgroundCanvas'
-import DiscoBallCanvas from './DiscoBallCanvas'
 
 export default function BurgerMenu() {
   const [open, setOpen] = useState(false)
 
   const toggleMenu = () => setOpen(!open)
+
+  const handleNavClick = (href: string) => {
+    setOpen(false)
+    const element = document.querySelector(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
     <>
@@ -39,30 +45,40 @@ export default function BurgerMenu() {
             animate={{ clipPath: 'circle(150% at 50% 50%)' }}
             exit={{ clipPath: 'circle(0% at 100% 0%)' }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
-            className="fixed inset-0 z-40 bg-black text-white overflow-hidden"
+            className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm text-white overflow-hidden"
           >
-            {/* 🎉 Hintergrund: DiscoBall */}
-            <div className="absolute inset-0 z-0">
-              <DiscoBallCanvas />
-            </div>
-
             {/* Menü-Einträge */}
             <div className="relative z-10 flex flex-col items-center justify-center h-full gap-8 text-2xl">
-              <a href="#home" onClick={toggleMenu}>
+              <button
+                onClick={() => handleNavClick('#home')}
+                className="hover:text-amber-300 transition-colors duration-300"
+              >
                 Home
-              </a>
-              <a href="/gallery" onClick={toggleMenu}>
-                Gallerie
-              </a>
-              <a href="#menu" onClick={toggleMenu}>
-                Speisekarte
-              </a>
-              <a href="#events" onClick={toggleMenu}>
+              </button>
+              <button
+                onClick={() => handleNavClick('#gallery')}
+                className="hover:text-amber-300 transition-colors duration-300"
+              >
+                Galerie
+              </button>
+              <button
+                onClick={() => handleNavClick('#about')}
+                className="hover:text-amber-300 transition-colors duration-300"
+              >
+                Über uns
+              </button>
+              <button
+                onClick={() => handleNavClick('#events')}
+                className="hover:text-amber-300 transition-colors duration-300"
+              >
                 Events
-              </a>
-              <a href="#kontakt" onClick={toggleMenu}>
+              </button>
+              <button
+                onClick={() => handleNavClick('#kontakt')}
+                className="hover:text-amber-300 transition-colors duration-300"
+              >
                 Kontakt
-              </a>
+              </button>
             </div>
           </motion.div>
         )}

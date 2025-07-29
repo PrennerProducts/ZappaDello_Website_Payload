@@ -38,7 +38,7 @@ export default function MasonryGallery({ images }: Props) {
             whileHover={{ scale: 1.03 }}
             viewport={{ once: true }}
             transition={{ duration: 0.35, ease: 'easeOut' }}
-            className="relative cursor-pointer overflow-hidden rounded-2xl border border-amber-500/20 hover:border-amber-400/60 shadow-md hover:shadow-[0_0_30px_4px_rgba(245,158,11,0.4)] transition-all duration-300 backdrop-blur-sm bg-black/40"
+            className="relative cursor-pointer overflow-hidden rounded-2xl border border-gray-600/40 hover:border-gray-400/80 shadow-[0_0_30px_4px_rgba(245,158,11,0.4)] md:shadow-md md:hover:shadow-[0_0_30px_4px_rgba(245,158,11,0.4)] transition-all duration-300 backdrop-blur-sm bg-black/40"
             onClick={() => setIndex(i)}
           >
             <Image

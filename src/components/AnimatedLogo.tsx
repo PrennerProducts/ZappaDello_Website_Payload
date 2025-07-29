@@ -19,7 +19,7 @@ export default function AnimatedLogo() {
         pathTimingFunction: Vivus.EASE_IN,
       },
       () => {
-        setIsFilled(false)
+        setIsFilled(true)
       },
     )
 
@@ -42,26 +42,26 @@ export default function AnimatedLogo() {
     >
       <defs>
         <linearGradient id="animated-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#F59E0B">
+          <stop offset="0%" stopColor="#FFFFFF">
             <animate
               attributeName="stop-color"
-              values="#F59E0B;#FB923C;#FCD34D;#F59E0B"
+              values="#FFFFFF;#F3F4F6;#D1D5DB;#FFFFFF"
               dur="4s"
               repeatCount="indefinite"
             />
           </stop>
-          <stop offset="50%" stopColor="#FB923C">
+          <stop offset="50%" stopColor="#F3F4F6">
             <animate
               attributeName="stop-color"
-              values="#FB923C;#FCD34D;#F59E0B;#FB923C"
+              values="#F3F4F6;#D1D5DB;#FFFFFF;#F3F4F6"
               dur="5s"
               repeatCount="indefinite"
             />
           </stop>
-          <stop offset="100%" stopColor="#FCD34D">
+          <stop offset="100%" stopColor="#D1D5DB">
             <animate
               attributeName="stop-color"
-              values="#FCD34D;#F59E0B;#FB923C;#FCD34D"
+              values="#D1D5DB;#FFFFFF;#F3F4F6;#D1D5DB"
               dur="6s"
               repeatCount="indefinite"
             />

@@ -16,21 +16,21 @@ export default function HeroParticles() {
   }, [])
 
   const options: ISourceOptions = {
-    fullScreen: { enable: true, zIndex: 0 },
+    fullScreen: { enable: true, zIndex: 10 },
     background: {
-      color: '#000',
+      color: 'transparent',
     },
     particles: {
-      number: { value: 20 },
+      number: { value: 50 },
       color: {
-        value: ['#00FFFF', '#FF00FF', '#39FF14', '#FFFF00'],
+        value: ['#a8a29e', '#78716c', '#f97316', '#f59e0b', '#d97706'],
       },
       shape: { type: 'circle' },
       opacity: {
-        value: 1,
+        value: 0.6,
       },
       size: {
-        value: { min: 1, max: 4 },
+        value: { min: 1, max: 3 },
       },
       move: {
         enable: true,
@@ -42,5 +42,9 @@ export default function HeroParticles() {
     detectRetina: true,
   }
 
-  return init ? <Particles id="heroParticles" options={options} /> : null
+  return init ? (
+    <div className="pointer-events-none">
+      <Particles id="heroParticles" options={options} />
+    </div>
+  ) : null
 }

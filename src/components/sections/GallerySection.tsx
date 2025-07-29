@@ -12,7 +12,7 @@ export default function GallerySection({ images }: Props) {
   return (
     <section className="py-20 px-6 relative z-20">
       <div className="container mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent">
           Galerie
         </h2>
 
