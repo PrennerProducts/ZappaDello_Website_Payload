@@ -42,27 +42,27 @@ export default function AnimatedLogo() {
     >
       <defs>
         <linearGradient id="animated-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#00FFFF">
+          <stop offset="0%" stopColor="#F59E0B">
             <animate
               attributeName="stop-color"
-              values="#00FFFF;#39FF14;#00BFFF;#00FFFF"
+              values="#F59E0B;#FB923C;#FCD34D;#F59E0B"
+              dur="4s"
+              repeatCount="indefinite"
+            />
+          </stop>
+          <stop offset="50%" stopColor="#FB923C">
+            <animate
+              attributeName="stop-color"
+              values="#FB923C;#FCD34D;#F59E0B;#FB923C"
               dur="5s"
               repeatCount="indefinite"
             />
           </stop>
-          <stop offset="50%" stopColor="#FF00FF">
+          <stop offset="100%" stopColor="#FCD34D">
             <animate
               attributeName="stop-color"
-              values="#FF00FF;#FF6EC7;#FF00FF"
+              values="#FCD34D;#F59E0B;#FB923C;#FCD34D"
               dur="6s"
-              repeatCount="indefinite"
-            />
-          </stop>
-          <stop offset="100%" stopColor="#FFFF00">
-            <animate
-              attributeName="stop-color"
-              values="#FFFF00;#FF00FF;#00FFFF;#FFFF00"
-              dur="8s"
               repeatCount="indefinite"
             />
           </stop>

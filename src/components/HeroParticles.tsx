@@ -21,7 +21,7 @@ export default function HeroParticles() {
       color: '#000',
     },
     particles: {
-      number: { value: 100 },
+      number: { value: 20 },
       color: {
         value: ['#00FFFF', '#FF00FF', '#39FF14', '#FFFF00'],
       },
