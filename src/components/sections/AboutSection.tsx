@@ -67,7 +67,7 @@ export default function AboutSection() {
               <div className="flex flex-col items-center space-y-3 p-6 bg-black/20 backdrop-blur-sm border border-gray-600/40 rounded-xl hover:border-gray-400/80 transition-all duration-300">
                 <span className="text-4xl">🎉</span>
                 <span className="text-gray-200 font-semibold text-center">
-                  Events, die man Montag noch spürt
+                  Events, die man am Montag noch spürt
                 </span>
               </div>
             </div>

@@ -80,14 +80,14 @@ export default async function HomePage() {
 
         {/* Neon Background Effects - Fixed */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-cyan-500/30 rounded-full blur-3xl animate-pulse duration-3000"></div>
-          <div className="absolute top-40 right-20 w-80 h-80 bg-pink-500/25 rounded-full blur-3xl animate-pulse delay-1000 duration-3000"></div>
-          <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-purple-500/30 rounded-full blur-3xl animate-pulse delay-500 duration-3000"></div>
-          <div className="absolute top-60 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1500 duration-3000"></div>
-          <div className="absolute bottom-40 right-1/3 w-88 h-88 bg-fuchsia-500/25 rounded-full blur-3xl animate-pulse delay-750 duration-3000"></div>
-          <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-emerald-500/30 rounded-full blur-3xl animate-pulse delay-2000 duration-3000"></div>
-          <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-orange-500/10 rounded-full blur-3xl animate-pulse delay-1250 duration-3000"></div>
-          <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-violet-500/10 rounded-full blur-3xl animate-pulse delay-1750 duration-3000"></div>
+          <div className="absolute top-20 left-10 w-96 h-96 bg-stone-600/50 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-80 h-80 bg-stone-700/40 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 left-1/3 w-72 h-72 bg-stone-600/50 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute top-60 left-1/4 w-64 h-64 bg-gray-800/30 rounded-full blur-3xl animate-pulse delay-1500"></div>
+          <div className="absolute bottom-40 right-1/3 w-88 h-88 bg-gray-700/40 rounded-full blur-3xl animate-pulse delay-750"></div>
+          <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-stone-600/50 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-yellow-500/15 rounded-full blur-3xl animate-pulse delay-1250"></div>
+          <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-orange-500/15 rounded-full blur-3xl animate-pulse delay-1750"></div>
         </div>
       </div>
 

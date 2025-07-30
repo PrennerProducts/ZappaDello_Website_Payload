@@ -7,9 +7,7 @@ export default function HeroTypewriter() {
 
   const initialSequence = [
     3000,
-    'The music, the people and you.',
-    3000,
-    'The original bar in Kaunertal.',
+    'The bar, the people and you.',
     3000,
     'Be there or be square.',
     5000,
@@ -22,7 +20,7 @@ export default function HeroTypewriter() {
 
   const loopSequence = [
     3000,
-    'The music, the people and you.',
+    'The bar, the people and you.',
     3000,
     'The original bar in Kaunertal.',
     3000,
