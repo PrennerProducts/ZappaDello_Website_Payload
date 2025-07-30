@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'de_AT',
     url: 'https://zappadello.at/',
-    siteName: 'Zappadello Bar',
+    siteName: 'Zappadello',
     title: 'Zappadello Bar - Die Bar im Kaunertal',
     description:
       'Willkommen in der Zappadello Bar! Seit 1992 der Treffpunkt im Kaunertal für Cocktails, Craft Beer und unvergessliche Abende. Manuel und Iris laden dich ein!',
