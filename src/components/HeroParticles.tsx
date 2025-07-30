@@ -22,27 +22,27 @@ export default function HeroParticles() {
     },
     particles: {
       number: { value: 50 },
-      color: {
-        value: [
-          '#a8a29e', // Stone Gray
-          '#78716c', // Stone Gray (dunkler)
-          '#f97316', // Orange
-          '#f59e0b', // Amber
-          '#d97706', // Orange (dunkler)
-        ],
-      },
       // color: {
       //   value: [
-      //     '#06b6d4', // Cyan (Neon Türkis)
-      //     '#ec4899', // Pink (Neon Pink)
-      //     '#a855f7', // Purple (Neon Lila)
-      //     '#3b82f6', // Blue (Neon Blau)
-      //     '#e879f9', // Fuchsia (Neon Magenta)
-      //     '#10b981', // Emerald (Neon Grün)
-      //     '#fb923c', // Orange (Neon Orange)
-      //     '#8b5cf6', // Violet (Neon Violett)
+      //     '#a8a29e', // Stone Gray
+      //     '#78716c', // Stone Gray (dunkler)
+      //     '#f97316', // Orange
+      //     '#f59e0b', // Amber
+      //     '#d97706', // Orange (dunkler)
       //   ],
       // },
+      color: {
+        value: [
+          '#06b6d4', // Cyan (Neon Türkis)
+          '#ec4899', // Pink (Neon Pink)
+          '#a855f7', // Purple (Neon Lila)
+          '#3b82f6', // Blue (Neon Blau)
+          '#e879f9', // Fuchsia (Neon Magenta)
+          '#10b981', // Emerald (Neon Grün)
+          '#fb923c', // Orange (Neon Orange)
+          '#8b5cf6', // Violet (Neon Violett)
+        ],
+      },
       shape: { type: 'circle' },
       opacity: {
         value: 0.6,
