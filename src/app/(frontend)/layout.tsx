@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       'Willkommen in der Zappadello Bar! Seit 1992 der Treffpunkt im Kaunertal für Cocktails, Bier und unvergessliche Abende. Manuel und Iris laden dich ein!',
     images: [
       {
-        url: '/opengraphimage.jpg',
+        url: '/opengraph-image.jpg', // mit Bindestrich
         width: 1200,
         height: 630,
         alt: 'Zappadello Logo',
