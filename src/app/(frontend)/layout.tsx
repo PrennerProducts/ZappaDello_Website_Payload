@@ -16,7 +16,7 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: 'Zappadello',
   description:
-    'Willkommen in der Zappadello Bar! Seit 1992 der Treffpunkt im Kaunertal für Cocktails, Craft Beer und unvergessliche Abende. Manuel und Iris laden dich ein!',
+    'Willkommen in der Zappadello Bar! Seit 1992 der Treffpunkt im Kaunertal für Cocktails, Bier und unvergessliche Abende. Manuel und Iris laden dich ein!',
   metadataBase: new URL('https://zappadello.at/'),
   openGraph: {
     type: 'website',
@@ -25,21 +25,21 @@ export const metadata: Metadata = {
     siteName: 'Zappadello',
     title: 'Zappadello Bar - Die Bar im Kaunertal',
     description:
-      'Willkommen in der Zappadello Bar! Seit 1992 der Treffpunkt im Kaunertal für Cocktails, Craft Beer und unvergessliche Abende. Manuel und Iris laden dich ein!',
+      'Willkommen in der Zappadello Bar! Seit 1992 der Treffpunkt im Kaunertal für Cocktails, Bier und unvergessliche Abende. Manuel und Iris laden dich ein!',
     images: [
       {
-        url: '/logo.svg',
+        url: '/opengraphimage.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zappadello Bar Logo',
+        alt: 'Zappadello Logo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zappadello Bar - Die Bar im Kaunertal',
+    title: 'Zappadello - Die Bar im Kaunertal',
     description:
-      'Willkommen in der Zappadello Bar! Seit 1992 der Treffpunkt im Kaunertal für Cocktails, Craft Beer und unvergessliche Abende.',
+      'Willkommen in der Zappadello Bar! Seit 1992 der Treffpunkt im Kaunertal für Cocktails, Bier und unvergessliche Abende.',
   },
   icons: {
     icon: '/logo.svg',

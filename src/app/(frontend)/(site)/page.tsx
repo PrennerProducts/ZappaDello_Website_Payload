@@ -130,6 +130,13 @@ export default async function HomePage() {
                 >
                   Impressum
                 </a>
+                {' · '}
+                <a
+                  href="/datenschutz"
+                  className="hover:text-amber-300 transition-colors duration-300"
+                >
+                  Datenschutz
+                </a>
               </p>
             </div>
           </div>
