@@ -38,7 +38,7 @@ export default function AboutSection() {
               </p>
 
               <p className="text-xl text-gray-200 leading-relaxed">
-                Seit 2022 schmeißen Manuel und Iris den Laden gemeinsam und sorgen mit viel Herzblut
+                Seit 2018 schmeißen Manuel und Iris den Laden gemeinsam und sorgen mit viel Herzblut
                 für unvergessliche Abende. Ob gemütlich was trinken oder bis in die Morgenstunden
                 feiern – hier ist alles möglich.
               </p>
