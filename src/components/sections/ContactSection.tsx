@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import { MapPin } from 'lucide-react'
 
 function ContactSection() {
   const handleOpenMaps = () => {
@@ -124,7 +125,52 @@ function ContactSection() {
                 onClick={handleOpenMaps}
                 className="w-full px-8 py-4 bg-gradient-to-r from-white to-gray-200 hover:from-gray-200 hover:to-gray-400 text-black font-bold text-lg rounded-xl transition-all duration-300 shadow-xl shadow-gray-300/30 hover:shadow-gray-300/50 hover:scale-105 transform flex items-center justify-center space-x-3"
               >
-                <span className="text-2xl">🗺️</span>
+                <div className="relative">
+                  {/* Google Maps Icon mit Map-Hintergrund */}
+                  <div className="relative w-10 h-10">
+                    {/* Map Hintergrund */}
+                    <div className="absolute inset-0 bg-blue-400 rounded-lg overflow-hidden">
+                      {/* Map Grid Pattern */}
+                      <div className="absolute inset-0 opacity-30">
+                        <div className="w-full h-full bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500">
+                          {/* Horizontale Linien */}
+                          <div className="absolute top-1/4 left-0 right-0 h-px bg-white/20"></div>
+                          <div className="absolute top-1/2 left-0 right-0 h-px bg-white/20"></div>
+                          <div className="absolute top-3/4 left-0 right-0 h-px bg-white/20"></div>
+                          {/* Vertikale Linien */}
+                          <div className="absolute top-0 bottom-0 left-1/4 w-px bg-white/20"></div>
+                          <div className="absolute top-0 bottom-0 left-1/2 w-px bg-white/20"></div>
+                          <div className="absolute top-0 bottom-0 left-3/4 w-px bg-white/20"></div>
+                        </div>
+                      </div>
+
+                      {/* Straßen */}
+                      <div className="absolute top-1/3 left-0 right-0 h-1 bg-white/40 rounded-full"></div>
+                      <div className="absolute top-2/3 left-0 right-0 h-1 bg-white/40 rounded-full"></div>
+                      <div className="absolute top-0 bottom-0 left-1/3 w-1 bg-white/40 rounded-full"></div>
+                      <div className="absolute top-0 bottom-0 left-2/3 w-1 bg-white/40 rounded-full"></div>
+                    </div>
+
+                    {/* Pin Shadow */}
+                    <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-4 h-2 bg-black/30 rounded-full animate-pulse"></div>
+
+                    {/* Main Pin */}
+                    <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center animate-bounce">
+                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                    </div>
+
+                    {/* Pin Point */}
+                    <div className="absolute top-5 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-2 border-transparent border-t-red-500"></div>
+
+                    {/* Pulse Ring */}
+                    <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-4 h-4 border border-red-500 rounded-full animate-ping opacity-75"></div>
+
+                    {/* Google Maps Logo */}
+                    <div className="absolute bottom-1 right-1 text-[6px] font-bold text-white bg-black/50 px-1 py-0.5 rounded">
+                      G
+                    </div>
+                  </div>
+                </div>
                 <span>Route in Google Maps öffnen</span>
               </button>
             </div>
