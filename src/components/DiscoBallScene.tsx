@@ -34,7 +34,7 @@ export default function DiscoBallScene() {
         {/* Optional: OrbitControls */}
         <OrbitControls enableZoom={false} />
         {/* Realistisches Environment */}
-        <Environment files="/partyzappa.JPG" background />
+        <Environment files="/iris.jpeg" background />
         {/* Licht + Kugel */}
         <ambientLight intensity={0.5} />
         <DiscoBall />
